@@ -1,0 +1,16 @@
+{% extends "layout.njk" %}
+<!-- Quando a pagina carregar, vai ler que precisa ir para a pagina layout levando esse conteudo -->
+
+{% block head %}
+    <title>Erro 404</title>
+{% endblock %}
+
+{% block content %}
+<div id="error">
+    <img src="doguinho.png" alt="Error 404">
+    <h1>ERRO 404</h1>   
+    <p>Doguizinho AUspacial não encontrou esta pagina </p>
+    <a id="button-error" href="/">Voltar ao inicio</a>
+</div>
+
+{% endblock %}

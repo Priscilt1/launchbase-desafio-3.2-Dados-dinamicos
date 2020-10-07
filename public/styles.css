@@ -1,0 +1,234 @@
+:root {
+    --color-primary: #8257e6;
+    --color-primary-hover: #9466ff;
+    --color-rocketseat: #7159c1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'roboto';
+    background-image: url(space1.jpg);
+    height: 100vh;
+    /* ver a questao da imagem do fundo */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    color: #fff;
+}
+
+
+header {
+    padding: 30px;
+    line-height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.links a:not(:first-child) {
+    margin-left: 30px;
+}
+
+.links a:hover {
+    color: var(--color-primary-hover);
+    transition: color 300ms;
+    text-decoration: underline;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;
+    color: #fff;
+    font-size: 20px;
+}
+
+#wrapper img {
+    border-radius: 50%;
+    border:  2px solid var(--color-primary-hover);
+    margin-bottom: 32px;
+}
+
+#wrapper h1 {
+    color: var(--color-primary); 
+    line-height: 50px;
+    font-weight: 700; 
+}
+
+#wrapper p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    opacity: 0.9;
+}
+
+#list {
+    list-style: inside;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#list li {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+#links-footer a {
+    border-bottom: 2px solid var(--color-primary-hover);
+}
+
+/*=== CARDS ===*/
+.cards {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-rocketseat);
+}
+
+.card__image-container img {
+    width: 100%;
+}
+
+.card__content,
+.card__info {
+    padding: 20px;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.card__content p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card__info p {
+    display: flex;
+    align-items: center;
+}
+
+.card__info i {
+    margin-right: 2px;
+}
+
+.card__time {
+  text-align: right;
+}
+
+/*=== MODAL ===*/
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* para trazer o modal pra cima  */
+    top: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    /* tem que calcular o margin de acordo com o tamanho do modal, exemplo 90 de altura e largura mais 5 de margin totaliza 100 para ficar centralizado */
+    margin: 5vh auto;
+    /* o position relativo permite que esconda o modal */
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal .maximize-modal {
+    color: black;
+    position: absolute;
+    right: 40px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal .maximize-modal i {
+    font-size: 20px;
+}
+
+.modal.maximized {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/*=== MODAL.ACTIVE ===*/
+/* lemnrando que o active tem que ser escrita colada, sem espaço */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal iframe {
+    width: 100%;
+    height: 90vh;
+}
+
+/* error 404 */
+#error {
+    text-align: center;
+}
+
+#error img {
+    margin: 80px 0 40px;
+}
+
+#error h1 {
+    color: var(--color-rocketseat);
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+#error p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#button-error {
+    background-color: var(--color-primary);
+    font-size: 20px;
+    color: white;
+    height: 60px;
+    width: 160px;
+    font-family: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px;
+    text-decoration: none;
+}
+
+#button-error:hover {
+    background-color: var(--color-primary-hover);
+    text-decoration: underline;
+}

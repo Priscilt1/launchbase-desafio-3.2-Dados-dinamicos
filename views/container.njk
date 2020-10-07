@@ -1,0 +1,84 @@
+<!-- Preciso resolver esta questao <title>Conteúdos</title> -->
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Conteúdos</title>
+
+    <!-- icone de fechar modal -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+
+<div id="wrapper">
+    <h1>Conteúdos</h1>
+</div>
+
+<section class="cards">
+
+    <div class="card" id="upload-de-imagens-no-s3-da-aws-com-node-js">
+        <div class="card__image-container">
+            <img src="https://blog.rocketseat.com.br/content/images/2020/09/upload-de-imagens-no-s3-da-aws-com-node-js.png" alt="Imagem blog">
+        </div>
+        <div class="card__content">
+            <p>Upload de imagens no S3 da AWS com Node.js</p>
+        </div>
+        <div class="card__info">
+            <p class="card__author">Thiago Marinho</p>
+            <p class="card__time"> <i class="material-icons">timer</i> 10 min</p>
+        </div>
+    </div>
+
+    <div class="card" id="entendendo-falsy-e-truthy-no-javascript">
+    <div class="card__image-container">
+        <img src="https://blog.rocketseat.com.br/content/images/2020/08/entendendo-falsy-e-truthy-no-javascript.png" alt="Imagem blog">
+    </div>
+    <div class="card__content">
+        <p>Entendendo Falsy e Truthy no JavaScript</p>
+    </div>
+    <div class="card__info">
+        <p class="card__author">Thiago Marinho</p>
+        <p class="card__time"><i class="material-icons">timer</i>3 min</p>
+    </div>
+    </div>
+
+    <div class="card" id="axios-um-cliente-http-full-stack">
+        <div class="card__image-container">
+            <img src="https://blog.rocketseat.com.br/content/images/2020/09/axios-um-cliente-http-full-stack-rocketseat.png" alt="Imagem blog">
+        </div>
+        <div class="card__content">
+            <p>Axios - um cliente HTTP Full Stack
+            </p>
+        </div>
+        <div class="card__info">
+            <p class="card__author">Thiago Marinho</p>
+            <p class="card__time"><i class="material-icons">timer</i>3 min</p>
+        </div>
+    </div>
+
+</section>
+
+<div class="modal-overlay">
+    <div class="modal">
+        <!-- controlar o click com o js -->
+        <a class="close-modal">
+            <i class="material-icons">close</i>
+        </a>
+
+        <!-- botao de maximizar  -->
+        <a class="maximize-modal">
+            <i class="material-icons">open_in_full</i>
+        </a>
+
+        <div class="modal-content">
+            <iframe src="" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+
+{% endblock %}
