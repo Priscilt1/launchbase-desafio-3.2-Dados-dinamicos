@@ -74,13 +74,13 @@ header {
     opacity: 0.9;
 }
 
-#list {
+#lists {
     list-style: inside;
     text-align: center;
     margin-bottom: 40px;
 }
 
-#list li {
+#lists li {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -101,6 +101,7 @@ header {
 
 .card {
     background-color: var(--color-rocketseat);
+    display: grid;
 }
 
 .card__image-container img {

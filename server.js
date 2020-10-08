@@ -4,6 +4,9 @@ const express = require('express')
 // chamando o nunjucks
 const nunjucks = require('nunjucks')
 
+//chamando os post do blog. Esta pegando o array do aquivo data.js
+// ./ referenciando a raiz do projeto
+const post = require('./data')
 
 // criando o servidor 
 const server = express()
@@ -16,18 +19,35 @@ server.use (express.static ('public'))
 server.set("view engine", "njk")
 
 nunjucks.configure('views', {
-    express:server
+    express:server,
+    autoescape: false
 })
 
 // adicionando a rota. Get significa pegar
 // renderizando o html, criando rota
 server.get('/', function(req, res){
-    return res.render('about')
+    const about = {
+        avatar_url:"https://avatars0.githubusercontent.com/u/28929274?s=200&v=4",
+        name: "Rocketseat",
+        role: "Plataforma de educação em tecnologia 🚀",
+        lists: [ 
+            {name:"JavaScript"},
+            {name:"ReactJs"},
+            {name:"ReactNative"},
+            {name:"NodeJs"}
+        ],
+        links: [
+            { name:"Github", url: "https://github.com/rocketseat-education"},
+            { name:"Instagram", url: "https://www.instagram.com/rocketseat_oficial/?hl=pt-br" },
+            { name:"Facebook", url: "https://www.facebook.com/rocketseat"  }
+        ]
+    }
+    return res.render('about', {about})
 })
 
 // criando rota para a pagina container
 server.get('/container', function(req, res){
-    return res.render('container')
+    return res.render('container', {items: post})
 })
 
 // criando rota para a pagina erro
