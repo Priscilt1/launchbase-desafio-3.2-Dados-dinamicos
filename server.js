@@ -20,7 +20,8 @@ server.set("view engine", "njk")
 
 nunjucks.configure('views', {
     express:server,
-    autoescape: false
+    autoescape: false,
+    noCache: true
 })
 
 // adicionando a rota. Get significa pegar

@@ -12,7 +12,8 @@ module.exports = [
         img:"2020/08/entendendo-falsy-e-truthy-no-javascript",
         title: "Entendendo Falsy e Truthy no JavaScript",
         time: "3 min",
-        author:"Thiago Marinho"
+        author:"Thiago Marinho",
+        featured: true
     },
     {
         id:"axios-um-cliente-http-full-stack",

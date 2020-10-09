@@ -22,8 +22,12 @@
     {# criando estrutura de repetição #}
     {% for item in items %}
         <div class="card" id="{{item.id}}">
-            <div class="card__image-container">
+            <div class="card__image-container {{ 'featured-wrapper' if item.featured }} ">
                 <img src="https://blog.rocketseat.com.br/content/images/{{item.img}}.png" alt="Imagem de {{item.title}}">
+                {# colocando o post em destaque #}
+                {% if item.featured %}
+                <div class="featured">featured</div>
+                {% endif %}
             </div>
             <div class="card__content">
                 <p>{{item.title}}</p>

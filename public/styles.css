@@ -102,6 +102,7 @@ header {
 .card {
     background-color: var(--color-rocketseat);
     display: grid;
+    cursor: pointer;
 }
 
 .card__image-container img {
@@ -232,4 +233,22 @@ header {
 #button-error:hover {
     background-color: var(--color-primary-hover);
     text-decoration: underline;
+}
+
+/* FEATURED */
+.featured-wrapper.card__image-container {
+    /* para colocar no filho o positivo absolute */
+    position: relative;
+}
+
+.featured {
+    background-color: #f7d05f ;
+    color: #111;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 4px 12px;
+    position: absolute;
+    right: 5px;
+    border-radius: 16px;
+    top: -10px;
 }
